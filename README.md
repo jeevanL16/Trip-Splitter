@@ -83,8 +83,8 @@ graph TD
 ### Installation & Launch
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-username/trip-splitter.git
-cd trip-splitter
+git clone https://github.com/jeevanL16/Trip-Splitter.git
+cd Trip-Splitter
 
 # 2. Install dependencies
 npm install
@@ -220,5 +220,3 @@ trip-splitter/
 
 - **Claude**: Consulted during the initial system design and research phase to explore domain boundary isolation, analyze edge-case behaviors of the Hamilton-Hare apportionment algorithm versus basis points, and outline edge-case test matrices.
 - **Google Antigravity**: Utilized during the implementation and verification phase to author strict TypeScript components, structure the 106-test automated verification suite, validate build artifacts, and perform automated interactive browser verification.
-#   T r i p - S p l i t t e r  
- 
