@@ -19,7 +19,7 @@ describe('split domain logic', () => {
       m2: 3333,
       m3: 3333,
     });
-    expect(result.m1! + result.m2! + result.m3!).toBe(10000);
+    expect((result.m1 ?? 0) + (result.m2 ?? 0) + (result.m3 ?? 0)).toBe(10000);
   });
 
   it('preserves trip order for extra paisa regardless of input selection order in equal split', () => {
@@ -30,13 +30,11 @@ describe('split domain logic', () => {
       paidBy: 'm1',
       date: '2026-03-12',
       category: 'Food',
-      // selected in reverse order: m3, m2, m1
       split: { type: 'equal', memberIds: ['m3', 'm2', 'm1'] },
     };
 
     const shares = computeShares(expense, tripMembers);
 
-    // m1 is first in tripMembers, so m1 gets 3334
     expect(shares).toEqual({
       m1: 3334,
       m2: 3333,
@@ -65,7 +63,7 @@ describe('split domain logic', () => {
       m2: 49995,
       m3: 50009,
     });
-    expect(shares.m1! + shares.m2! + shares.m3!).toBe(149999);
+    expect((shares.m1 ?? 0) + (shares.m2 ?? 0) + (shares.m3 ?? 0)).toBe(149999);
   });
 
   it('passes exact split shares through directly', () => {

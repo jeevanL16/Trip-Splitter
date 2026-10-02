@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import { computeBalances, balanceStatus } from './balances';
 import type { Expense, Member } from './types';
-import sampleData from '../data/sample-data.json';
+import { getSampleState } from '../app/persistence';
 
 describe('balances domain logic', () => {
-  const members: Member[] = sampleData.members;
-  // Type assertion in test fixture is standard when importing JSON
-  const sampleExpenses = sampleData.expenses as unknown as Expense[];
+  const sampleState = getSampleState();
+  const members: Member[] = sampleState.members;
+  const sampleExpenses: Expense[] = sampleState.expenses;
 
   it('computes exact golden balances for sample data matching §5.5', () => {
     const balances = computeBalances(members, sampleExpenses);
@@ -83,7 +83,6 @@ describe('balances domain logic', () => {
       },
     };
 
-    // Second expense where m2 pays back
     const expense2: Expense = {
       id: 'e2',
       description: 'Coffee',
@@ -109,12 +108,9 @@ describe('balances domain logic', () => {
     const balancesBefore = computeBalances(members, sampleExpenses);
     expect(balancesBefore.m1).toBe(1855420);
 
-    // Delete e1 (Villa booking: 2400000 paid by m1, split equally among all 5 = 480000 each)
     const remainingExpenses = sampleExpenses.filter((e) => e.id !== 'e1');
     const balancesAfter = computeBalances(members, remainingExpenses);
 
-    // m1 was credited 2400000 and debited 480000 (+1920000 net)
-    // 1855420 - 1920000 = -64580
     expect(balancesAfter.m1).toBe(1855420 - (2400000 - 480000));
 
     const sum = Object.values(balancesAfter).reduce((acc, val) => acc + val, 0);
