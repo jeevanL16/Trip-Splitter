@@ -1,0 +1,31 @@
+.category-filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.category-filter-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.category-filter-select {
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s ease;
+}
+
+.category-filter-select:hover {
+  border-color: var(--color-border-hover);
+}
+
+.category-filter-select:focus-visible {
+  border-color: var(--color-border-focus);
+}

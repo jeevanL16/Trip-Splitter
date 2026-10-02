@@ -1,0 +1,114 @@
+.balance-section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.balance-header {
+  margin-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.balance-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.balance-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.balance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-3);
+}
+
+.balance-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  gap: var(--space-2);
+}
+
+.balance-member-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2-5);
+}
+
+.balance-member-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-border);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.balance-member-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+}
+
+.balance-status-badge {
+  text-align: right;
+}
+
+.balance-status-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* Status variants with high contrast text and background */
+.balance-card-gets-back {
+  border-color: var(--color-success-border);
+  background-color: var(--color-success-bg);
+}
+.balance-card-gets-back .balance-member-avatar {
+  background-color: var(--color-success-border);
+  color: var(--color-success);
+}
+.balance-card-gets-back .balance-status-text {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.balance-card-owes {
+  border-color: var(--color-danger-border);
+  background-color: var(--color-danger-bg);
+}
+.balance-card-owes .balance-member-avatar {
+  background-color: var(--color-danger-border);
+  color: var(--color-danger);
+}
+.balance-card-owes .balance-status-text {
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+.balance-card-settled {
+  background-color: var(--color-surface);
+}
+.balance-card-settled .balance-status-text {
+  color: var(--color-text-muted);
+}
