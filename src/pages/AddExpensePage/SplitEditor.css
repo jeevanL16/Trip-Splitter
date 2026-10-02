@@ -1,0 +1,196 @@
+.split-editor-container {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.split-type-fieldset,
+.split-members-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.split-legend {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+  padding: 0;
+}
+
+.split-type-radios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-2);
+}
+
+.split-radio-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.split-radio-label:hover {
+  border-color: var(--color-primary-border);
+  background-color: var(--color-primary-light);
+}
+
+.split-radio-active {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.split-radio-input {
+  accent-color: var(--color-primary);
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.equal-members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-2-5);
+}
+
+.equal-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2-5);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.equal-checkbox-label:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.equal-checkbox-input {
+  accent-color: var(--color-primary);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: var(--radius-sm);
+}
+
+.split-helper-banner {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-primary-border);
+  color: var(--color-text-secondary);
+  padding: var(--space-2-5) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+  font-size: 0.9rem;
+}
+
+.shares-inputs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.share-input-row {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.share-input-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1-5);
+}
+
+.share-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-prefix,
+.percent-suffix {
+  position: absolute;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  user-select: none;
+}
+
+.currency-prefix {
+  left: var(--space-3);
+}
+
+.percent-suffix {
+  right: var(--space-3);
+}
+
+.share-input-field {
+  width: 100%;
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s ease;
+}
+
+.share-input-wrapper .currency-prefix + .share-input-field {
+  padding-left: 1.8rem;
+}
+
+.share-input-field:focus-visible {
+  border-color: var(--color-primary);
+}
+
+.share-input-field[aria-invalid="true"] {
+  border-color: var(--color-danger);
+  background-color: #fffafa;
+}
+
+.share-field-error {
+  margin-top: var(--space-1);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-danger);
+}
+
+.split-group-error {
+  margin-top: var(--space-4);
+  padding: var(--space-2-5) var(--space-4);
+  background-color: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-border);
+  color: var(--color-danger);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1-5);
+}

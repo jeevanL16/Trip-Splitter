@@ -1,0 +1,63 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-5);
+}
+
+.form-field-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1-5);
+}
+
+.field-required-indicator {
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+.form-field-hint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1-5);
+}
+
+.form-field-control {
+  position: relative;
+  display: flex;
+}
+
+.form-field-control input,
+.form-field-control select {
+  width: 100%;
+  min-height: var(--tap-target-min);
+  padding: var(--space-2-5) var(--space-4);
+  font-size: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-field-control input:hover,
+.form-field-control select:hover {
+  border-color: var(--color-border-hover);
+}
+
+.form-field-control input[aria-invalid="true"],
+.form-field-control select[aria-invalid="true"] {
+  border-color: var(--color-danger);
+  background-color: #fffafa;
+}
+
+.form-field-error {
+  margin-top: var(--space-1-5);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-danger);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
