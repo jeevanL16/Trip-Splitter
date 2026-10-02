@@ -90,3 +90,32 @@
   background-color: var(--color-primary);
   border-radius: var(--radius-full);
 }
+
+@media (max-width: 480px) {
+  .navbar-inner {
+    height: 3.75rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+    padding-inline: var(--space-1);
+    gap: var(--space-1-5);
+  }
+
+  .navbar-logo-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    padding-inline: var(--space-2-5);
+    font-size: 0.875rem;
+  }
+
+  .nav-link-active::after,
+  .nav-link[aria-current="page"]::after {
+    left: var(--space-2-5);
+    right: var(--space-2-5);
+  }
+}

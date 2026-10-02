@@ -1,8 +1,12 @@
-import type { ReactElement } from 'react';
+import { useEffect, type ReactElement } from 'react';
 import { AddExpenseForm } from './AddExpenseForm';
 import './AddExpensePage.css';
 
 export function AddExpensePage(): ReactElement {
+  useEffect(() => {
+    document.title = 'Add Expense | Trip Splitter';
+  }, []);
+
   return (
     <div className="add-expense-page">
       <div className="add-expense-header">

@@ -1,8 +1,12 @@
-import type { ReactElement } from 'react';
+import { useEffect, type ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 import './NotFoundPage.css';
 
 export function NotFoundPage(): ReactElement {
+  useEffect(() => {
+    document.title = 'Page Not Found | Trip Splitter';
+  }, []);
+
   return (
     <div className="not-found-container">
       <div className="not-found-card">

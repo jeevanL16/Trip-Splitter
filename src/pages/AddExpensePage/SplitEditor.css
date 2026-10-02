@@ -194,3 +194,17 @@
   align-items: center;
   gap: var(--space-1-5);
 }
+
+@media (max-width: 480px) {
+  .split-editor-container {
+    padding: var(--space-3-5);
+  }
+
+  .split-type-radios {
+    grid-template-columns: 1fr;
+  }
+
+  .equal-members-grid {
+    grid-template-columns: 1fr;
+  }
+}

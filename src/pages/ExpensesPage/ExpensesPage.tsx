@@ -36,6 +36,10 @@ export function ExpensesPage(): ReactElement {
   );
 
   useEffect(() => {
+    document.title = 'Expenses | Trip Splitter';
+  }, []);
+
+  useEffect(() => {
     if (flashMessage) {
       void navigate(location.pathname, { replace: true, state: null });
     }
