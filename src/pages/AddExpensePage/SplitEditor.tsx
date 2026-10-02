@@ -57,6 +57,15 @@ export function SplitEditor({
     }
   }
 
+  function formatPercentDisplay(bp: number): string {
+    const whole = Math.trunc(bp / 100);
+    const frac = bp % 100;
+    if (frac === 0) {
+      return `${whole}%`;
+    }
+    return `${whole}.${String(frac).padStart(2, '0')}%`;
+  }
+
   return (
     <div className="split-editor-container">
       {/* 1. Split Type Selector */}
@@ -179,7 +188,7 @@ export function SplitEditor({
         <div className="percent-shares-section">
           <div className="split-helper-banner" aria-live="polite">
             <span>
-              Assigned <strong>{(assignedPercentBp / 100).toFixed(2)}%</strong> of <strong>100%</strong>
+              Assigned <strong>{formatPercentDisplay(assignedPercentBp)}</strong> of <strong>100%</strong>
             </span>
           </div>
 
